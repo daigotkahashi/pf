@@ -1,0 +1,11 @@
+{
+  "name": "pf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "daigon <pillow813.fuzzy69002@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^4.0.1",
+    "gulp-sass": "^4.0.2"
+  }
+}

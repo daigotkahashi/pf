@@ -1,0 +1,21 @@
+div{
+    p{
+        background-color: #fff;
+        width: 200px;
+    }
+}
+
+
+block{
+    width: 50px;
+    &__element{
+        height: 500px;
+        &--modifire{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+        }
+    }
+}
