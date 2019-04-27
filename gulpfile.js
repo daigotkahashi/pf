@@ -6,13 +6,13 @@ const sass = require("gulp-sass");
 // style.scssの監視タスクを作成する
 gulp.task("default", function() {
   // ★ style.scssファイルを監視
-  return gulp.watch("scss/*.scss", function() {
+    return gulp.watch("src/scss/*.scss", function() {
     // style.scssの更新があった場合の処理
 
     // style.scssファイルを取得
     return (
       gulp
-        .src("scss/*.scss")
+        .src("src/scss/*.scss")
         // Sassのコンパイルを実行
         .pipe(
           sass({
