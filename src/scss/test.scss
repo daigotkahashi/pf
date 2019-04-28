@@ -1,23 +1,24 @@
-div{
-    p{
-        background-color: #fff;
-        width: 200px;
-        height: 200px;
-        box-sizing: border-box;
-    }
+div {
+  p {
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
 }
 
+.block {
+  width: 50px;
 
-block{
-    width: 50px;
-    &__element{
-        height: 500px;
-        &--modifire{
-            display: -webkit-flex;
-            display: -moz-flex;
-            display: -ms-flex;
-            display: -o-flex;
-            display: flex;
-        }
+  &__element {
+    height: 500px;
+
+    &--modifire {
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
     }
+  }
 }
