@@ -1,0 +1,11 @@
+@import "setting";
+@import "parts";
+@import "layout";
+
+.profile {
+  &__body {
+    &__detail_button {
+      @include radius-button;
+    }
+  }
+}
