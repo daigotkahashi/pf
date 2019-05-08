@@ -1,0 +1,22 @@
+{
+  "name": "pf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "daigon <pillow813.fuzzy69002@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "stylelint": "^10.0.1",
+    "stylelint-order": "^3.0.0"
+  },
+  "scripts": {
+    "stylelint": "stylelint src/scss/*.scss --fix"
+  },
+  "devDependencies": {
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-recommended-scss": "^3.3.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-scss": "^3.6.1"
+  }
+}
