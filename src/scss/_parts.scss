@@ -11,10 +11,10 @@
     background-color: $darkblue;
     width: 250px;
     border-radius: 25px;
-  }
 
-  &:hover {
-    background-color: #fff;
-    color: $darkblue;
+    &:hover {
+      background-color: #fff;
+      color: $darkblue;
+    }
   }
 }
