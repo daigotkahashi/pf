@@ -2,19 +2,55 @@
 
 @mixin radius-button {
   text-align: center;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid $darkblue;
+  background-color: $darkblue;
+  width: 250px;
+  border-radius: 25px;
+  padding: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
 
-  a {
-    display: block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid $darkblue;
-    background-color: $darkblue;
-    width: 250px;
-    border-radius: 25px;
-
-    &:hover {
-      background-color: #fff;
-      color: $darkblue;
-    }
+  &:hover {
+    background-color: #fff;
+    color: $darkblue;
   }
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin cassette__box {
+  list-style: none;
+  border: 1px solid $gray95;
+  width: 290px;
+  text-align: center;
+  display: inline-block;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 6px;
+
+  &:not(:nth-of-type(3n)) {
+    margin-right: 30px;
+  }
+
+  &__head {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+}
+
+@mixin inner {
+  width: 930px;
+  margin: 0 auto;
+  padding: 20px;
 }
