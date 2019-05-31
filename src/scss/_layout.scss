@@ -88,10 +88,15 @@
 
         &__list {
           background-color: $gray95;
-          padding: 10px 0 10px 30px;
+          padding: 10px 0 10px 0;
 
           &__item {
             list-style: none;
+            padding-left: 30px;
+
+            &:hover {
+              background-color: darken($gray95, 5%);
+            }
           }
         }
       }
