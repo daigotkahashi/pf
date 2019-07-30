@@ -111,8 +111,8 @@
       font-size: 0;
       width: 930px;
 
-      .cassette__box {
-        @include cassette__box;
+      .spin__card {
+        @include spin__card;
       }
     }
   }
