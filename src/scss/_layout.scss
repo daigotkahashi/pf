@@ -11,6 +11,9 @@
     &__head {
       font-size: 3.2rem;
       color: #fff;
+      span{
+        font-size: 1.6rem;
+      }
     }
 
     &__action-nav {
@@ -112,7 +115,7 @@
       width: 930px;
 
       .spin__card {
-        @include spin__card;
+        @include spin_card;
       }
     }
   }
