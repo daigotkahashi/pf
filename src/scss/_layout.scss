@@ -83,7 +83,6 @@
     &__side {
       width: 230px;
 
-      &__type {
         &__head {
           background-color: $lightblue;
           padding: 8px 20px;
@@ -102,7 +101,6 @@
             }
           }
         }
-      }
 
       .checkbox__category {
         display: block;
