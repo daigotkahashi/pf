@@ -72,7 +72,7 @@
   }
 }
 
-.work {
+.work,.last-update {
   width: 1280px;
   margin: 0 auto;
 
@@ -101,11 +101,6 @@
             }
           }
         }
-
-      .checkbox__category {
-        display: block;
-        padding: 4px 0;
-      }
     }
 
     &__main__list {
@@ -117,6 +112,13 @@
       }
     }
   }
+}
+
+.select__category {
+  display: block;
+  padding: 4px 0;
+  position: relative;
+  @include checkbox_label;
 }
 
 .profile {

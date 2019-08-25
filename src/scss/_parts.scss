@@ -114,3 +114,46 @@
   margin: 0 auto;
   padding: 20px;
 }
+
+@mixin checkbox_label{
+  &__checkbox{
+    display: inline-block;
+    position: relative;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border: solid 1px $gray40;
+    border-radius: 5px;
+    .select__category &{
+      vertical-align:sub;
+    }
+  }
+  & input[type="checkbox"]:checked ~ &__checkbox{
+    background-color: $darkblue;
+    &::after{
+      content:"";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-40%, -60%) rotate(45deg);
+      display: block;
+      border:solid 1px #fff;
+      border-width: 0 2px 2px 0;
+      width: 5px;
+      height: 12px;
+    }
+  }
+  input{
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
