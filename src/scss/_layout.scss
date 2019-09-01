@@ -59,6 +59,11 @@
   }
 }
 
+.last-update{
+  width: 1280px;
+  margin: 0 auto;
+}
+
 .content {
   margin-top: 50px;
 }
@@ -72,7 +77,7 @@
   }
 }
 
-.work,.last-update {
+.work {
   width: 1280px;
   margin: 0 auto;
 
@@ -89,7 +94,6 @@
         }
 
         &__list {
-          background-color: $gray95;
           padding: 10px 0 10px 0;
 
           &__item {
