@@ -75,6 +75,7 @@
     will-change: contents;
 
     &__front {
+      $this: &;
       z-index: 2;
       @include card_centering;
       &__head {
@@ -91,6 +92,42 @@
           object-fit: contain;
           width: 230px;
           height: 190px;
+        }
+      }
+      &--coding{
+        ///21日までに共通化する
+        @extend #{$this};
+        .label-area{
+          position: absolute;
+          right:0;
+          top:0;
+          background-color: #e6712e;
+          display: block;
+          width: 70px;
+          height: 20px;
+          &::before{
+            content: "コーディング";
+            color: white;
+            vertical-align: middle;
+          }
+        }
+      }
+      &--design{
+        ///21日までに共通化する
+        @extend #{$this};
+        .label-area{
+          position: absolute;
+          right:0;
+          top:0;
+          background-color: #12B357;
+          display: block;
+          width: 70px;
+          height: 20px;
+          &::before{
+            content: "デザイン";
+            color: white;
+            vertical-align: middle;
+          }
         }
       }
     }

@@ -89,7 +89,7 @@
       width: 230px;
 
         &__head {
-          background-color: $lightblue;
+          border-bottom: solid 2px $lightblue;
           padding: 8px 20px;
         }
 
@@ -110,10 +110,6 @@
     &__main__list {
       font-size: 0;
       width: 930px;
-
-      .spin__card {
-        @include spin_card;
-      }
     }
   }
 }
@@ -123,6 +119,10 @@
   padding: 4px 0;
   position: relative;
   @include checkbox_label;
+}
+
+.spin__card {
+  @include spin_card;
 }
 
 .profile {
