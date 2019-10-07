@@ -1,3 +1,5 @@
 src/css/
 yarn-error.log
 node_modules/
+firebase.json
+.firebaserc
