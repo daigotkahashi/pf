@@ -11,7 +11,8 @@
     &__head {
       font-size: 3.2rem;
       color: #fff;
-      span{
+
+      span {
         font-size: 1.6rem;
       }
     }
@@ -59,7 +60,7 @@
   }
 }
 
-.last-update{
+.last-update {
   width: 1280px;
   margin: 0 auto;
 }
@@ -88,23 +89,23 @@
     &__side {
       width: 230px;
 
-        &__head {
-          border-bottom: solid 2px $lightblue;
-          padding: 8px 20px;
-        }
+      &__head {
+        border-bottom: solid 2px $lightblue;
+        padding: 8px 20px;
+      }
 
-        &__list {
-          padding: 10px 0 10px 0;
+      &__list {
+        padding: 10px 0 10px 0;
 
-          &__item {
-            list-style: none;
-            padding-left: 30px;
+        &__item {
+          list-style: none;
+          padding-left: 30px;
 
-            &:hover {
-              background-color: darken($gray95, 5%);
-            }
+          &:hover {
+            background-color: darken($gray95, 5%);
           }
         }
+      }
     }
 
     &__main__list {
@@ -118,6 +119,7 @@
   display: block;
   padding: 4px 0;
   position: relative;
+
   @include checkbox_label;
 }
 

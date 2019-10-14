@@ -38,11 +38,17 @@
   position: absolute;
   text-align: center;
   font-size: 1rem;
+  transform-style: preserve-3d;
+  background: #fff;
+
+  &__head {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
 }
 
-@mixin labeling{
+@mixin labeling {
   position: absolute;
-
 }
 
 @mixin spin_card {
@@ -54,7 +60,7 @@
   background-color: transparent;
   perspective: 1000px;
 
-  &:hover .spin__card__inner{
+  &:hover .spin__card__inner {
     transform: rotateY(180deg);
   }
 
@@ -76,54 +82,57 @@
 
     &__front {
       $this: &;
-      z-index: 2;
+
       @include card_centering;
-      &__head {
-        font-size: 2rem;
-        margin-bottom: 8px;
-      }
-      &__image{
+
+      &__image {
         font-size: 150px;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        img{
+        img {
           object-fit: contain;
           width: 230px;
           height: 190px;
         }
       }
-      &--coding{
+
+      &--coding {
         ///21日までに共通化する
         @extend #{$this};
-        .label-area{
+
+        .label-area {
           position: absolute;
-          right:0;
-          top:0;
+          right: 0;
+          top: 0;
           background-color: #e6712e;
           display: block;
           width: 70px;
           height: 20px;
-          &::before{
+
+          &::before {
             content: "コーディング";
             color: white;
             vertical-align: middle;
           }
         }
       }
-      &--design{
+
+      &--design {
         ///21日までに共通化する
         @extend #{$this};
-        .label-area{
+
+        .label-area {
           position: absolute;
-          right:0;
-          top:0;
-          background-color: #12B357;
+          right: 0;
+          top: 0;
+          background-color: #12b357;
           display: block;
           width: 70px;
           height: 20px;
-          &::before{
+
+          &::before {
             content: "デザイン";
             color: white;
             vertical-align: middle;
@@ -131,15 +140,13 @@
         }
       }
     }
-    &__back{
-      z-index: 1;
+
+    &__back {
       @include card_centering;
-      transform: rotateY(180deg);
-      &__head{
-        font-size: 2rem;
-        margin-bottom: 8px;
-      }
-      &__text{
+
+      transform: translateZ(-1px)  rotateY(180deg);
+
+      &__text {
         text-align: left;
         font-size: 1.6rem;
         width: 230px;
@@ -156,8 +163,8 @@
   padding: 20px;
 }
 
-@mixin checkbox_label{
-  &__checkbox{
+@mixin checkbox_label {
+  &__checkbox {
     display: inline-block;
     position: relative;
     background-color: #fff;
@@ -165,37 +172,31 @@
     height: 20px;
     border: solid 1px $gray65;
     border-radius: 5px;
-    .select__category &{
-      vertical-align:sub;
+
+    .select__category & {
+      vertical-align: sub;
     }
   }
-  & input[type="checkbox"]:checked ~ &__checkbox{
+
+  & input[type="checkbox"]:checked ~ &__checkbox {
     background-color: $darkblue;
-    border:none;
-    &::after{
-      content:"";
+    border: none;
+
+    &::after {
+      content: "";
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-40%, -60%) rotate(45deg);
       display: block;
-      border:solid 1px #fff;
+      border: solid 1px #fff;
       border-width: 0 2px 2px 0;
       width: 5px;
       height: 12px;
     }
   }
-  input{
+
+  input {
     display: none;
   }
 }
-
-
-
-
-
-
-
-
-
-
