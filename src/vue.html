@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="test">
+    <h1>{{ title }}</h1>
+    <h2>{{lastName+" "+firstName}}</h2>
+    <div class="image"><img v-for="img in image" :src="img" alt=""></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
