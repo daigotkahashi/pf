@@ -6,15 +6,21 @@
   <title>ポートフォリオ</title>
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <script src="js/preReload.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
 </head>
 
-<body class="pre-reload">
+
+  <body class="pre-reload">
+  <div id="app">
   <header class="header">
     <div class="header__contents">
 
-      <h1 class="header__contents__head">製作中ポートフォリオ<span>~随時更新します</span></h1>
+      <h1 class="header__contents__head">製作中ポートフォリオ</h1>
 
       <ul class="header__contents__action-nav">
         <li class="link-cassette">
@@ -33,110 +39,62 @@
 
     </div>
   </header>
-  <div class="last-update">※最終更新日 10/15  chrome以外で回転するカードが激しく崩れていたので修正<br>
-  vue.jsをいじってみたので追加</div>
   <div class="content">
 
     <div class="work">
-      <h2 class="contents__title">work</h2>
       <div class="work__body">
 
         <div class="work__body__side">
-            <h3 class="work__body__side__head">カテゴリ</h3>
-            <ul class="work__body__side__list">
-              <li class="work__body__side__list__item">
+          <h3 class="work__body__side__head">カテゴリ</h3>
+          <ul class="work__body__side__list">
+            <li
+                    v-for="category in selectCategoly"
+                    class="work__body__side__list__item"
+            >
               <label class="select__category">
                 <input type="checkbox" name="work-title">
-                <span class="select__category__checkbox"></span>
-                コーディング
+                <span
+                        class="select__category__checkbox"
+                        :class="{
+                              'select__category__checkbox--layout':category==='html&css',
+                              'select__category__checkbox--js':category==='javascript',
+                              'select__category__checkbox--design':category==='デザイン'
+                            }"></span>
+                {{category}}
               </label>
-              </li>
-              <li class="work__body__side__list__item">
-              <label class="select__category">
-                <input type="checkbox" name="work-title">
-                <span class="select__category__checkbox"></span>
-                デザイン
-              </label>
-              </li>
-            </ul>
+            </li>
+          </ul>
         </div><!-- work__body__side -->
 
         <div class="work__body__main">
+          <h2 class="contents__title">work</h2>
           <ul class="work__body__main__list">
-            <li class="spin__card">
-              <a href="https://www.odakyu-leafia.jp/life/" target="blank" class="spin__card__inner">
-                <div class="spin__card__inner__front--coding">
-                  <div class="label-area"></div>
-                  <h4 class="spin__card__inner__front__head">小田急不動産</h4>
-                  <div class="spin__card__inner__front__image"><img src="img/leafia.png" alt="  "></div>
-                </div>
-                <div class="spin__card__inner__back">
-                <h4 class="spin__card__inner__back__head">小田急不動産</h4>
-                <div class="spin__card__inner__back__text">一年ほど前、初めての現場に入った直後にコーディングをしたサイトです。<br>下層4ページ含む。レスポンシブ対応</div>
-                </div>
-              </a>
-            </li>
-            <li class="spin__card">
-              <a href="https://www.ipros.jp/" target="blank" class="spin__card__inner">
+            <li
+                    v-for="card in cards"
+                    class="spin__card"
+            >
+              <a :href="card.url" target="blank" class="spin__card__inner">
                 <div class="spin__card__inner__front">
-                  <h4 class="spin__card__inner__front__head">イプロス製造業</h4>
-                  <div class="spin__card__inner__front__image"><img src="img/ipros.png" alt="  "></div>
+                  <div class="label-area">
+                    <span
+                            v-for="label in card.label"
+                            class="label-area__item"
+                            :class="{
+                              'label-area__item--layout':label==='html&css',
+                              'label-area__item--js':label==='javascript',
+                              'label-area__item--design':label==='デザイン'
+                            }"
+                    >
+                      {{label}}
+                    </span>
+                  </div>
+                  <h4 class="spin__card__inner__front__head">{{card.title}}</h4>
+                  <div class="spin__card__inner__front__image"><img :src="card.image" alt="  "></div>
                 </div>
                 <div class="spin__card__inner__back">
-                <h4 class="spin__card__inner__back__head">イプロス製造業</h4>
-                <div class="spin__card__inner__back__text">現在の出向先の自社サイト。<br>主にhtml、scssを用いたコーディングや、ABテストのためのスクリプトを記述したりしています。</div>
-                </div>
-              </a>
-            </li>
-            <li class="spin__card">
-              <a class="spin__card__inner">
-                <div class="spin__card__inner__front--design">
-                  <div class="label-area"></div>
-                  <h4 class="spin__card__inner__front__head">コンテンツ名</h4>
-                  <div class="spin__card__inner__front__image"><img src="http://placehold.jp/230x190.png" alt="  "></div>
-                </div>
-                <div class="spin__card__inner__back">
-                <h4 class="spin__card__inner__back__head">タイトル</h4>
-                <div class="spin__card__inner__back__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</div>
-                </div>
-              </a>
-            </li>
-            <li class="spin__card">
-              <a href="vue.html" target="blank" class="spin__card__inner">
-                <div class="spin__card__inner__front--coding">
-                  <div class="label-area"></div>
-                  <h4 class="spin__card__inner__front__head">vue.js</h4>
-                  <div class="spin__card__inner__front__image"><img src="http://placehold.jp/230x190.png" alt="  "></div>
-                </div>
-                <div class="spin__card__inner__back">
-                <h4 class="spin__card__inner__back__head">vue.js</h4>
-                <div class="spin__card__inner__back__text">hello world程度です</div>
-                </div>
-              </a>
-            </li>
-            <li class="spin__card">
-              <a target="blank" href="https://cp.mistore.jp/common/event_calendar/christmas_collection/2019/07.html" class="spin__card__inner">
-                <div class="spin__card__inner__front--coding">
-                  <div class="label-area"></div>
-                  <h4 class="spin__card__inner__front__head">伊勢丹案件01</h4>
-                  <div class="spin__card__inner__front__image"><img src="img/kashi.png" alt="  "></div>
-                </div>
-                <div class="spin__card__inner__back">
-                <h4 class="spin__card__inner__back__head">伊勢丹案件01</h4>
-                <div class="spin__card__inner__back__text">初めて実務でvue.jsを使用しました。<br>「ぜひこちらの項目を〜」のボタンを押すと表示される部分をvueで実装しました。</div>
-                </div>
-              </a>
-            </li>
-            <li class="spin__card">
-              <a target="blank" href="https://www.isetan.mistore.jp/kyoto/event_calendar/wonderfulmarche.html" class="spin__card__inner">
-                <div class="spin__card__inner__front--coding">
-                  <div class="label-area"></div>
-                  <h4 class="spin__card__inner__front__head">伊勢丹案件02</h4>
-                  <div class="spin__card__inner__front__image"><img src="img/wonder.png" alt="  "></div>
-                </div>
-                <div class="spin__card__inner__back">
-                <h4 class="spin__card__inner__back__head">伊勢丹案件02</h4>
-                <div class="spin__card__inner__back__text">画面下の方、写真が並んでいる部分がモーダルで開きます。<br>モーダルで表示される部分や絞込み機能をvueで書いてみました。</div>
+                  <h4 class="spin__card__inner__back__head">{{card.title}}</h4>
+                  <div class="spin__card__inner__back__text">{{card.description}}
+                  </div>
                 </div>
               </a>
             </li>
@@ -150,12 +108,13 @@
         <div class="profile__body">
           <div class="profile__body__name">髙橋 大瑚</div>
           <ul class="profile__body__contact-information">
-            <li class="profile__body__contact-information__text">tel:  ***</li>
-            <li class="profile__body__contact-information__text">mail:  ***</li>
+            <li class="profile__body__contact-information__text">tel: ***</li>
+            <li class="profile__body__contact-information__text">mail: ***</li>
           </ul>
-          <p class="profile__body__text">高校卒業後、丸5年間工場に勤務。<br>  最後の半年間で、働きながらスク－ルに通い、adobe系のソフトの操作とhtml、cssの基礎を学ぶ。</p>
-          <p class="profile__body__text">工場退職後、webの仕事に就くために転職。<br>  が、転職に失敗してしまい、家電量販店にてネット回線の営業をやらされる。</p>
-          <p class="profile__body__text">8ヶ月ほど勤務した後、現在所属している派遣ヶ月、あとらす二十一に登録。<br>派遣先に恵まれたため、scss、git、ターミナル、javascript等のスキルが身につく。</p>
+          <p class="profile__body__text">高校卒業後、丸5年間工場に勤務。<br> 最後の半年間で、働きながらスク－ルに通い、adobe系のソフトの操作とhtml、cssの基礎を学ぶ。</p>
+          <p class="profile__body__text">工場退職後、webの仕事に就くために転職。<br> が、転職に失敗してしまい、家電量販店にてネット回線の営業をやらされる。</p>
+          <p class="profile__body__text">8ヶ月ほど勤務した後、現在所属している派遣ヶ月、あとらす二十一に登録。<br>派遣先に恵まれたため、scss、git、ターミナル、javascript等のスキルが身につく。
+          </p>
           <p class="profile__body__text">スタヂオ・ユニ株式会社に就職。<br>入社してすぐに転職を考え始め、今に至ります。</p>
           <p class="profile__body__text"></p>
           <ul class="profile__body__company-list">
@@ -185,6 +144,9 @@
       <small class="copy-right">Copyright &copy; 2019　daigotakahashi All Rights Reserved.</small>
     </div>
   </footer>
-</body>
+  </div>
+  <script src="js/app.js" type="text/javascript"></script>
+  </body>
+
 
 </html>

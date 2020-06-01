@@ -2,11 +2,11 @@
   background-color: $blue;
 
   &__contents {
-    width: 1280px;
-    margin: 0 auto;
+    @include contentArea(1280px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 10px;
 
     &__head {
       font-size: 3.2rem;
@@ -61,8 +61,7 @@
 }
 
 .last-update {
-  width: 1280px;
-  margin: 0 auto;
+  @include contentArea(1280px);
 }
 
 .content {
@@ -79,8 +78,7 @@
 }
 
 .work {
-  width: 1280px;
-  margin: 0 auto;
+  @include contentArea(1280px);
 
   &__body {
     display: flex;
@@ -99,7 +97,6 @@
 
         &__item {
           list-style: none;
-          padding-left: 30px;
 
           &:hover {
             background-color: darken($gray95, 5%);
@@ -109,15 +106,25 @@
     }
 
     &__main__list {
-      font-size: 0;
-      width: 930px;
+      max-width: 960px;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+
+  @include large {
+    &__body {
+      &__main__list {
+        justify-content: center;
+      }
     }
   }
 }
 
 .select__category {
   display: block;
-  padding: 4px 0;
+  padding: 4px 0 4px 30px;
   position: relative;
 
   @include checkbox_label;
@@ -188,7 +195,7 @@
     &__body {
       .form-input {
         display: block;
-        width: 850px;
+        width: 100%;
         padding: 5px;
 
         &:not(:first-child) {
@@ -217,8 +224,7 @@
   color: #fff;
 
   &__contents {
-    width: 1280px;
-    margin: 0 auto;
+    @include contentArea(1280px);
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
