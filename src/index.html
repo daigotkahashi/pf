@@ -20,7 +20,7 @@
   <header class="header">
     <div class="header__contents">
 
-      <h1 class="header__contents__head">製作中ポートフォリオ</h1>
+      <h1 class="header__contents__head">ポートフォリオ</h1>
 
       <ul class="header__contents__action-nav">
         <li class="link-cassette">
@@ -51,7 +51,11 @@
                     v-for="category in selectCategoly"
                     class="work__body__side__list__item"
             >
-              <label class="select__category">
+              <label
+                      @click="checked($event)"
+                      class="select__category"
+
+              >
                 <input type="checkbox" name="work-title">
                 <span
                         class="select__category__checkbox"
@@ -60,7 +64,7 @@
                               'select__category__checkbox--js':category==='javascript',
                               'select__category__checkbox--design':category==='デザイン'
                             }"></span>
-                {{category}}
+                <span>{{category}}</span>
               </label>
             </li>
           </ul>
@@ -109,19 +113,14 @@
           <div class="profile__body__name">髙橋 大瑚</div>
           <ul class="profile__body__contact-information">
             <li class="profile__body__contact-information__text">tel: ***</li>
-            <li class="profile__body__contact-information__text">mail: ***</li>
+            <li class="profile__body__contact-information__text">mail: pillow813.fuzzy69002@gmail.com</li>
           </ul>
           <p class="profile__body__text">高校卒業後、丸5年間工場に勤務。<br> 最後の半年間で、働きながらスク－ルに通い、adobe系のソフトの操作とhtml、cssの基礎を学ぶ。</p>
           <p class="profile__body__text">工場退職後、webの仕事に就くために転職。<br> が、転職に失敗してしまい、家電量販店にてネット回線の営業をやらされる。</p>
           <p class="profile__body__text">8ヶ月ほど勤務した後、現在所属している派遣ヶ月、あとらす二十一に登録。<br>派遣先に恵まれたため、scss、git、ターミナル、javascript等のスキルが身につく。
           </p>
-          <p class="profile__body__text">スタヂオ・ユニ株式会社に就職。<br>入社してすぐに転職を考え始め、今に至ります。</p>
+          <p class="profile__body__text">スタヂオ・ユニ株式会社に就職。<br>CMSへのテキストコピー、コーディング、商品梱包などを担当</p>
           <p class="profile__body__text"></p>
-          <ul class="profile__body__company-list">
-            <li class="profile__body__company-list__item">あとらす二十一内で研修(3ヶ月)</li>
-            <li class="profile__body__company-list__item">株式会社SUI Products(6ヶ月)</li>
-            <li class="profile__body__company-list__item">株式会社イプロス(6ヶ月)</li>
-          </ul>
           <div class="profile__body__detail_button"><a href="">more</a></div>
         </div>
       </div>

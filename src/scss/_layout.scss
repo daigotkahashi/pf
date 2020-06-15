@@ -105,11 +105,14 @@
       }
     }
 
-    &__main__list {
-      max-width: 960px;
-      display: flex;
-      justify-content: flex-start;
-      flex-wrap: wrap;
+    &__main {
+      margin: 0 auto;
+      &__list {
+        max-width: 960px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
     }
   }
 
