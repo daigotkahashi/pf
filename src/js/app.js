@@ -25,6 +25,13 @@ var app = new Vue({
                 url: "https://www.isetan.mistore.jp/kyoto/event_calendar/wonderfulmarche.html"
             },
             {
+                label: ["html&css", "javascript"],
+                title: "伊勢丹案件03",
+                description: "スクロールスパイ（スクロールすると現在地に応じてナビゲーションがアクティブになる）を実装しました。\n何故か機能完成前に納品になったのでナビゲーションクリック後の挙動が少しおかしいです。。。",
+                image: "img/ise_app.png",
+                url: "https://cp.mistore.jp/common/service/miapp/main.html"
+            },
+            {
                 label: ["デザイン"],
                 title: "個人ブログ ラフ",
                 description: "デザイン、技術的な備忘録と趣味、勉強を兼ねてwordPressで制作中。\n完成したらwebデザイナーの妻と一緒に更新する予定",
@@ -43,7 +50,7 @@ var app = new Vue({
                 description: "一年ほど前、初めての現場に入った直後にコーディングをしたサイトです。\n下層4ページ含む。レスポンシブ対応",
                 image: "img/leafia.png",
                 url: "https://www.odakyu-leafia.jp/life/"
-            }
+            },
         ],
         selectCategoly: ["html&css", "javascript", "デザイン"],
         checkedCategoly: []
