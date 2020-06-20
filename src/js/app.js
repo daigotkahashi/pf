@@ -47,7 +47,7 @@ var app = new Vue({
             {
                 label: ["html&css"],
                 title: "小田急不動産",
-                description: "一年ほど前、初めての現場に入った直後にコーディングをしたサイトです。\n下層4ページ含む。レスポンシブ対応",
+                description: "初めての現場に入った直後にコーディングをしたサイトです。\n下層4ページ含む。レスポンシブ対応",
                 image: "img/leafia.png",
                 url: "https://www.odakyu-leafia.jp/life/"
             },
