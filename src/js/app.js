@@ -6,28 +6,28 @@ var app = new Vue({
             {
                 label: ["html&css", "javascript"],
                 title: "イプロス製造業",
-                description: "以前の出向先の自社サイト。\n主にhtml、scssを用いたコーディングや、ABテストのためのスクリプトを記述したりしています。",
+                description: "以前の出向先の自社サイト。\n主にhtml、scssを用いたコーディングや、ABテストのためのスクリプトを記述したりしていました。",
                 image: "img/ipros.png",
                 url: "https://www.ipros.jp/"
             },
             {
                 label: ["html&css", "javascript"],
                 title: "伊勢丹案件01",
-                description: "初めて実務でvue.jsを使用しました。\n「ぜひこちらの項目を〜」のボタンを押すと表示される部分をvueで実装しました。",
+                description: "初めて実務でvue.jsを使用しました。\n「ぜひこちらの項目を〜」のボタンを押すと表示される部分をvueで実装しました。\n納品後、更新することはないサイト",
                 image: "img/kashi.png",
                 url: "https://cp.mistore.jp/common/event_calendar/christmas_collection/2019/07.html"
             },
             {
                 label: ["html&css", "javascript"],
                 title: "伊勢丹案件02",
-                description: "画面下の方、写真が並んでいる部分がモーダルで開きます。\nモーダルで表示される部分や絞込み機能をvueで書いてみました。",
+                description: "画面下の方、写真が並んでいる部分がモーダルで開きます。\nモーダルで表示される部分や絞込み機能をvueで書いてみました。\n納品後、更新することはないサイト",
                 image: "img/wonder.png",
                 url: "https://www.isetan.mistore.jp/kyoto/event_calendar/wonderfulmarche.html"
             },
             {
                 label: ["html&css", "javascript"],
                 title: "伊勢丹案件03",
-                description: "スクロールスパイ（スクロールすると現在地に応じてナビゲーションがアクティブになる）を実装しました。\n何故か機能完成前に納品になったのでナビゲーションクリック後の挙動が少しおかしいです。。。",
+                description: "スクロールスパイ（スクロールすると現在地に応じてナビゲーションがアクティブになる）を実装しました。\n何故か機能完成前に納品になったのでナビゲーションクリック後の挙動が少しおかしいです。。。\n納品後、更新することはないサイト",
                 image: "img/ise_app.png",
                 url: "https://cp.mistore.jp/common/service/miapp/main.html"
             },
@@ -47,7 +47,7 @@ var app = new Vue({
             {
                 label: ["html&css"],
                 title: "小田急不動産",
-                description: "初めての現場に入った直後にコーディングをしたサイトです。\n下層4ページ含む。レスポンシブ対応",
+                description: "2年前、初めての現場に入った直後にコーディングをしたサイトです。\n下層4ページ含む。レスポンシブ対応",
                 image: "img/leafia.png",
                 url: "https://www.odakyu-leafia.jp/life/"
             },
