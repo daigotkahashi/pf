@@ -11,14 +11,14 @@ var app = new Vue({
                 url: "https://www.ipros.jp/"
             },
             {
-                label: ["html&css", "javascript"],
+                label: ["javascript"],
                 title: "伊勢丹案件01",
                 description: "初めて実務でvue.jsを使用しました。\n「ぜひこちらの項目を〜」のボタンを押すと表示される部分をvueで実装しました。\n納品後、更新することはないサイト",
                 image: "img/kashi.png",
                 url: "https://cp.mistore.jp/common/event_calendar/christmas_collection/2019/07.html"
             },
             {
-                label: ["html&css", "javascript"],
+                label: ["javascript"],
                 title: "伊勢丹案件02",
                 description: "画面下の方、写真が並んでいる部分がモーダルで開きます。\nモーダルで表示される部分や絞込み機能をvueで書いてみました。\n納品後、更新することはないサイト",
                 image: "img/wonder.png",
