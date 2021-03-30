@@ -4,6 +4,13 @@ var app = new Vue({
         message: 'Hello Vue!',
         cards: [
             {
+                label: ["html&css","javascript"],
+                title: "DMM-QNTM",
+                description: "VliverのLP 11ty、EJSを使って作成",
+                image: "img/qntm.png",
+                url: "https://qntm.dmm.com/"
+            },
+            {
                 label: ["html&css", "javascript"],
                 title: "イプロス製造業",
                 description: "以前の出向先の自社サイト。\n主にhtml、scssを用いたコーディングや、ABテストのためのスクリプトを記述したりしていました。",
@@ -15,14 +22,14 @@ var app = new Vue({
                 title: "伊勢丹案件01",
                 description: "初めて実務でvue.jsを使用しました。\n「ぜひこちらの項目を〜」のボタンを押すと表示される部分をvueで実装しました。\n納品後、更新することはないサイト",
                 image: "img/kashi.png",
-                url: "https://cp.mistore.jp/common/event_calendar/christmas_collection/2019/07.html"
+                url: "isetan2.html"
             },
             {
                 label: ["javascript"],
                 title: "伊勢丹案件02",
                 description: "画面下の方、写真が並んでいる部分がモーダルで開きます。\nモーダルで表示される部分や絞込み機能をvueで書いてみました。\n納品後、更新することはないサイト",
                 image: "img/wonder.png",
-                url: "https://www.isetan.mistore.jp/kyoto/event_calendar/wonderfulmarche.html"
+                url: "isetan1.html"
             },
             {
                 label: ["html&css", "javascript"],
@@ -39,18 +46,18 @@ var app = new Vue({
                 url: "https://xd.adobe.com/view/c5cdb85d-efcb-4b12-63c6-5d2fd875b89f-b3fc/grid/"
             },
             {
-                label: ["デザイン"],
-                title: "テスト用",
-                description: "機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用",
-                image: "https://placehold.jp/150x150.png",
-            },
-            {
                 label: ["html&css"],
                 title: "小田急不動産",
                 description: "2年前、初めての現場に入った直後にコーディングをしたサイトです。\n下層4ページ含む。レスポンシブ対応",
                 image: "img/leafia.png",
                 url: "https://www.odakyu-leafia.jp/life/"
             },
+            {
+                label: ["デザイン"],
+                title: "テスト用",
+                description: "機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用機能のテスト用",
+                image: "https://placehold.jp/150x150.png",
+            }
         ],
         selectCategoly: ["html&css", "javascript", "デザイン"],
         checkedCategoly: []
