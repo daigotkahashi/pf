@@ -69,12 +69,17 @@
 }
 
 .contents__title {
+  margin-bottom: 16px;
   font-size: 3rem;
-  margin-bottom: 30px;
 
   .work & {
     text-align: center;
   }
+}
+
+.contents__text {
+  margin-bottom: 30px;
+  font-size: 1.4rem;
 }
 
 .work {

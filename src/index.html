@@ -73,11 +73,17 @@
 
         <div class="work__body__main">
           <h2 class="contents__title">work</h2>
+
+          <p class="contents__text">
+            ユニクロ、GUのページが現在公開されている実績ページになります。<br>
+            変な挙動で申し訳ありませんが、案件名のカードにホバーすると案件名の詳細が見られるようになっています。
+          </p>
+
           <ul class="work__body__main__list">
             <li
                 v-for="card in cards"
                 class="spin__card"
-                v-bind:class="{ '-disabled': card.disabled }"
+                v-if="!card.disabled"
             >
               <a :href="card.url" target="blank" class="spin__card__inner">
                 <div class="spin__card__inner__front">
@@ -97,7 +103,7 @@
                   <h4 class="spin__card__inner__front__head">{{card.title}}</h4>
                   <div class="spin__card__inner__front__image">
                     <img v-if="card.image" :src="card.image" alt="  ">
-                    <img v-else src="https://placehold.jp/230x190.png" alt="  ">
+                    <img v-else src="https://placehold.jp/150x150.png" alt="  ">
                   </div>
                 </div>
                 <div class="spin__card__inner__back">
@@ -107,6 +113,42 @@
                 </div>
               </a>
             </li>
+
+            <li
+                v-for="card in cards"
+                class="spin__card"
+                v-bind:class="{ '-disabled': card.disabled }"
+                v-if="card.disabled"
+            >
+              <a :href="card.url" target="blank" class="spin__card__inner">
+                <div class="spin__card__inner__front">
+                  <div class="label-area">
+                    <span
+                        v-for="label in card.label"
+                        class="label-area__item"
+                        :class="{
+                              'label-area__item--layout':label==='html&css',
+                              'label-area__item--js':label==='javascript',
+                              'label-area__item--design':label==='デザイン'
+                            }"
+                    >
+                      {{label}}
+                    </span>
+                  </div>
+                  <h4 class="spin__card__inner__front__head">{{card.title}}</h4>
+                  <div class="spin__card__inner__front__image">
+                    <img v-if="card.image" :src="card.image" alt="  ">
+                    <img v-else src="https://placehold.jp/150x150.png" alt="  ">
+                  </div>
+                </div>
+                <div class="spin__card__inner__back">
+                  <h4 class="spin__card__inner__back__head">{{card.title}}</h4>
+                  <div class="spin__card__inner__back__text">{{card.description}}
+                  </div>
+                </div>
+              </a>
+            </li>
+          
           </ul>
         </div><!-- work__body__main -->
       </div><!-- work__body -->
